@@ -1,0 +1,71 @@
+{% extends 'admin/base.html' %}
+{% load tags %}
+
+{% block extrahead %}
+<link rel="icon" href="{% disk 'img/favicon.ico' %}">
+<link rel="stylesheet" href="https://lib.arvancloud.ir/vazir-font/33.003/Farsi-Digits/Vazirmatn-FD-font-face.css">
+<style>
+
+        :root {
+            --font-family-primary: Sniglet, Vazirmatn FD, body-font, Arial, sans-serif;
+        }
+        body * {
+            font-family: Sniglet, Vazirmatn, body-font, Arial, sans-serif;
+            font-weight: normal;
+        }
+
+        table a {
+            color: var(--fallback-p,oklch(var(--p)/1));
+        }
+
+        td.field-action_raw_buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            width: max-content;
+          max-width: 300px;
+        }
+
+        td.field-action_raw_buttons button {
+                width: max-content;
+                padding: .5rem;
+        }
+</style>
+<script>
+
+        window.addEventListener('load', () => {
+
+            const buttons = document.querySelectorAll('.action-btn');
+            const adminForm = document.querySelector('form[id="changelist-form"]');
+            buttons.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        if (confirm(`Selected Action is [ ${this.getAttribute('data-action').toUpperCase()} ]. Are you sure?`)) {
+                                if (!adminForm) return;
+
+                                const actionValue = this.getAttribute('data-action');
+                                const idValue = this.getAttribute('data-id');
+
+                                let actionInput = adminForm.querySelector('[name="action"]');
+                                actionInput.value = actionValue;
+                                if (!actionInput) {
+                                        return;
+                                }
+
+
+                                selectedInput = document.createElement('input');
+                                selectedInput.type = 'hidden';
+                                selectedInput.name = '_selected_action';
+                                selectedInput.value = idValue;
+                                adminForm.appendChild(selectedInput);
+
+
+                                console.log('Submitting with action:', actionValue, 'and id:', idValue);
+                                adminForm.submit();
+                        }
+                });
+            });
+        });
+</script>
+{% endblock %}
+
