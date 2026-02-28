@@ -11,6 +11,7 @@ from jalali_date_new.widgets import (
 )
 from massadmin.massadmin import mass_change_selected
 
+from tools.converters import _
 from tools.datetimes import jdt
 from utils.db import search_by_query
 
@@ -140,7 +141,7 @@ class AbstractAdmin(admin.ModelAdmin):
 
         return format_html(" ".join(buttons))
 
-    action_raw_buttons.short_description = "Actions"
+    action_raw_buttons.short_description = _("Actions")
 
     def get_list_filter(self, request):
         # Start With Defined list_filter If Any
