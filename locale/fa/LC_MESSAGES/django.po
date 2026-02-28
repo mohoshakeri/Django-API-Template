@@ -161,3 +161,92 @@ msgstr "مدارک"
 #: utils/abstract.py:46
 msgid "backup"
 msgstr "پشتیبان"
+
+#: utils/admin.py:143
+msgid "Actions"
+msgstr "اقدامات"
+
+#: utils/permissions.py:20 utils/permissions.py:33
+msgid "Authentication Error"
+msgstr "خطای احراز هویت"
+
+#: utils/permissions.py:26
+msgid "Access Denied"
+msgstr "دسترسی غیرمجاز"
+
+#: utils/permissions.py:35
+msgid "Authentication Error!"
+msgstr "خطای احراز هویت!"
+
+#: utils/permissions.py:50
+msgid "You are not allowed to access this feature!"
+msgstr "شما مجاز به دسترسی به این قابلیت نیستید!"
+
+#: utils/permissions.py:77 utils/permissions.py:105
+msgid "Invalid Token"
+msgstr "توکن نامعتبر است"
+
+#: utils/permissions.py:83 utils/permissions.py:110
+msgid "Invalid User Token"
+msgstr "توکن کاربر نامعتبر است"
+
+#: utils/permissions.py:85 utils/permissions.py:112
+msgid "User is not Active"
+msgstr "کاربر فعال نیست"
+
+#: utils/views.py:24
+msgid "Object not found [404]"
+msgstr "شیء مورد نظر یافت نشد [404]"
+
+#: utils/db.py:114
+msgid "{} must be one of {}"
+msgstr "{} باید یکی از {} باشد"
+
+#: utils/db.py:127
+msgid "Set a hash_field"
+msgstr "hash_field را مشخص کنید"
+
+#: utils/db.py:129
+msgid "Set a ngram_field"
+msgstr "ngram_field را مشخص کنید"
+
+#: utils/db.py:211
+msgid "Invalid JSON object."
+msgstr "شیء JSON نامعتبر است."
+
+#: utils/validators.py:58
+msgid "Must be all Persian letters."
+msgstr "باید فقط شامل حروف فارسی باشد."
+
+#: utils/validators.py:67
+msgid "Must be all Persian letters. It must not contain any numbers or symbols."
+msgstr "باید فقط شامل حروف فارسی باشد و نباید عدد یا نماد داشته باشد."
+
+#: utils/validators.py:75
+msgid "Must be a standard mobile like 0910*******."
+msgstr "باید یک شماره موبایل معتبر مانند 0910******* باشد."
+
+#: utils/validators.py:81
+msgid "Must be a gmail."
+msgstr "باید یک آدرس Gmail باشد."
+
+#: utils/validators.py:94
+msgid "The date must be at least {} years ago."
+msgstr "تاریخ باید حداقل {} سال قبل باشد."
+
+#: utils/validators.py:102
+msgid "Must be an Emoji."
+msgstr "باید یک ایموجی باشد."
+
+#: utils/validators.py:127
+msgid "NCode is Invalid."
+msgstr "کد ملی نامعتبر است."
+
+#: utils/validators.py:136
+msgid "Must be in past"
+msgstr "باید در گذشته باشد"
+
+#: utils/validators.py:145
+msgid "Must be in future"
+msgstr "باید در آینده باشد"
+
